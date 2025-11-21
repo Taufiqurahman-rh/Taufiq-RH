@@ -6,106 +6,76 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: #0a0d1a;
-    color: #e8e8e8;
-    overflow-x: hidden;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #0a0f1f;
+    color: #fff;
 }
 
-/* Cyber scanning line */
-.scanline {
+/* CYBER GRID BACKGROUND */
+.grid-bg {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    height: 2px;
-    background: rgba(0, 255, 200, 0.4);
-    animation: scan 7s linear infinite;
-    z-index: 2;
-}
-@keyframes scan {
-    0% { top: 0; }
-    100% { top: 100%; }
+    height: 100%;
+    background-image: 
+        linear-gradient(#00ffe533 1px, transparent 1px),
+        linear-gradient(90deg, #00ffe533 1px, transparent 1px);
+    background-size: 45px 45px;
+    animation: gridMove 18s linear infinite;
+    z-index: -1;
 }
 
-/* Background grid */
-.grid {
-    position: fixed;
-    inset: 0;
-    background-image: 
-        linear-gradient(#0ff1 1px, transparent 1px),
-        linear-gradient(90deg, #0ff1 1px, transparent 1px);
-    background-size: 45px 45px;
-    opacity: 0.15;
-    pointer-events: none;
+@keyframes gridMove {
+    from { background-position: 0 0; }
+    to { background-position: 0 300px; }
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 150px 20px 80px;
+    padding: 130px 20px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaffaa;
 }
 
+/* TYPING TEXT */
 .typing {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #00ffe1;
-    min-height: 26px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #55f3ff;
+    height: 28px;
 }
 
-/* Section */
+/* SECTIONS */
 .section {
+    padding: 60px 20px;
     max-width: 900px;
     margin: auto;
-    padding: 50px 20px;
 }
 
 .section h2 {
-    border-left: 4px solid #00ffe1;
-    padding-left: 12px;
+    border-left: 4px solid #00eaff;
+    padding-left: 10px;
     margin-bottom: 15px;
 }
 
-/* Cards */
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid #00ffe120;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00ffee22;
     padding: 20px;
-    margin-top: 18px;
-    border-radius: 10px;
-    transition: 0.25s ease;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    transition: 0.25s ease-in-out;
 }
 
 .card:hover {
-    border-color: #00ffe1;
-    transform: translateY(-3px);
-}
-
-/* Glitch Effect (subtle) */
-.glitch {
-    position: relative;
-}
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    top: 0;
-    color: #00fff2;
-    background: transparent;
-    text-shadow: -2px 0 #00fff2;
-    clip-path: inset(0 0 0 0);
-    opacity: 0;
-    animation: glitch 2.8s infinite;
-}
-
-@keyframes glitch {
-    0% { opacity: 0; }
-    7% { opacity: 1; transform: translate(2px, -1px); }
-    10% { opacity: 0; }
-    100% { opacity: 0; }
+    transform: translateY(-5px);
+    border-color: #00eaff;
 }
