@@ -1,117 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Taufiqurahman</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=60');
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(3px);
-            color: #fff;
-        }
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.75);
-            min-height: 100vh;
-            padding-bottom: 50px;
-        }
-
-        header {
-            text-align: center;
-            padding: 100px 20px 60px;
-        }
-
-        header h1 {
-            font-size: 48px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 18px;
-            opacity: 0.8;
-        }
-
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h2 {
-            border-left: 4px solid #00eaff;
-            padding-left: 12px;
-            margin-bottom: 15px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.07);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #00eaff44;
-            margin-bottom: 20px;
-        }
-
-        .contact a {
-            color: #00eaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            opacity: 0.7;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio — Taufiqurahman</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="overlay">
 
-        <header>
-            <h1>Taufiqurahman</h1>
-            <p>Cybersecurity Enthusiast • Networking</p>
-        </header>
+    <div class="container">
 
-        <section>
-            <h2>Tentang Saya</h2>
-            <div class="card">
-                Saya memiliki minat besar dalam dunia cybersecurity, pentest, eksploitasi,
-                CTF, serta networking. Fokus saya adalah terus berkembang dan memperdalam
-                skill melalui project dan praktik langsung.
+        <!-- Foto Profil -->
+        <div class="left">
+            <img src="profil.png" alt="Foto Profil" class="profile-img">
+        </div>
+
+        <!-- Konten -->
+        <div class="right">
+            <h1 class="name">Taufiqurahman</h1>
+            <p class="role">Cybersecurity Enthusiast • Networking</p>
+
+            <p class="desc">
+                Saya memiliki minat besar pada dunia cybersecurity, penetration testing,
+                CTF, exploit, serta sistem jaringan. Fokus saya adalah memperdalam skill
+                melalui praktik langsung, eksperimen, dan berbagai project pribadi.
+            </p>
+
+            <h2 class="sub">Keahlian</h2>
+            <ul class="skills">
+                <li>Cybersecurity</li>
+                <li>Penetration Testing</li>
+                <li>CTF & Exploit</li>
+                <li>Networking (Cisco / Mikrotik)</li>
+                <li>Linux Administration</li>
+                <li>Ethical Hacking</li>
+            </ul>
+
+            <h2 class="sub">Kontak</h2>
+            <div class="contact">
+                <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
+                <p>LinkedIn: 
+                    <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">
+                        Taufiqurahman
+                    </a>
+                </p>
             </div>
-        </section>
-
-        <section>
-            <h2>Keahlian</h2>
-            <div class="card">
-                • Cybersecurity<br>
-                • Penetration Testing<br>
-                • Capture The Flag (CTF)<br>
-                • Networking (Cisco / Mikrotik)<br>
-                • Linux Administration<br>
-                • Ethical Hacking
-            </div>
-        </section>
-
-        <section>
-            <h2>Kontak</h2>
-            <div class="card contact">
-                Gmail: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a><br><br>
-                Linkedin: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Profil Linkedin Saya</a>
-            </div>
-        </section>
-
-        <footer>
-            © 2025 — Portofolio Taufiqurahman
-        </footer>
-
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
