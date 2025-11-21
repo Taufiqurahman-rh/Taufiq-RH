@@ -1,53 +1,53 @@
-const detailBox = document.getElementById("detail");
-
-const skillDetail = {
+const skillData = {
     ethical: {
         title: "Ethical Hacking",
-        text: `Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan
-        bekerja dan bagaimana cara memperkuat pertahanan sistem. Fokus pada identifikasi
-        celah keamanan dan cara mitigasinya tanpa merusak sistem.`
+        desc: `Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan bekerja,
+        bagaimana celah dieksploitasi, dan bagaimana sistem dapat diperkuat. Fokus pada mindset penyerang
+        untuk meningkatkan pertahanan keamanan.`
     },
     ctf: {
         title: "CTF (Capture The Flag)",
-        text: `Sering mengikuti dan mempelajari berbagai jenis CTF untuk meningkatkan kemampuan
-        eksploitasi, analisis sistem, dan pemecahan masalah. Terbiasa mencari FLAG pada kategori
-        seperti web exploitation, cryptography, forensic, hingga network analysis.`
+        desc: `Sering mengikuti berbagai jenis CTF untuk meningkatkan kemampuan eksploitasi, analisis,
+        debugging, dan problem solving. Terbiasa dengan kategori Web Exploitation, Forensic, Cryptography,
+        hingga Network Analysis.`
     },
     pentest: {
         title: "Pentesting",
-        text: `Menguasai tahapan pengujian keamanan: reconnaissance, scanning, exploitation,
-        privilege escalation hingga reporting. Menganalisis kerentanan dan memberikan rekomendasi
-        perbaikan sistem.`
+        desc: `Menguasai proses pentest mulai dari reconnaissance, scanning, enumeration, exploitation,
+        privilege escalation, hingga reporting untuk menemukan serta menilai kerentanan pada sistem.`
     },
     nmap: {
         title: "Nmap",
-        text: `Berpengalaman menggunakan Nmap untuk memetakan jaringan, mendeteksi port dan
-        service terbuka, fingerprinting sistem, hingga menemukan celah keamanan potensial.`
+        desc: `Berpengalaman menggunakan Nmap untuk scanning port, service detection, OS fingerprinting,
+        network mapping, dan menemukan potensi kerentanan pada sebuah jaringan.`
     },
     wireshark: {
         title: "Wireshark",
-        text: `Mampu membaca dan menganalisis paket jaringan untuk troubleshooting,
-        investigasi aktivitas mencurigakan, dan memahami pola komunikasi dalam jaringan.`
+        desc: `Mampu melakukan analisis paket jaringan untuk troubleshooting, investigasi aktivitas mencurigakan,
+        hingga memahami pola komunikasi antar host secara mendalam.`
     },
     networking: {
         title: "Networking",
-        text: `Berpengalaman dengan perangkat jaringan seperti router dan switch (Cisco).
-        Memahami konsep VLAN, routing, subnetting, DNS, DHCP, keamanan jaringan dasar, dan
-        konfigurasi perangkat.`
+        desc: `Memahami konsep jaringan seperti VLAN, routing, ACL, subnetting, switching, hingga keamanan jaringan.
+        Mampu mengkonfigurasi router dan switch (terutama Cisco).`
     },
     linux: {
-        title: "Linux & Security Tools",
-        text: `Menggunakan Kali Linux sebagai sistem utama untuk analisis keamanan, termasuk
-        tools seperti Metasploit, Nmap, Wireshark, Nikto, SQLmap, dan Burp Suite.`
+        title: "Linux & Tools Keamanan",
+        desc: `Terbiasa menggunakan Linux (terutama Kali Linux) sebagai sistem utama untuk analisis keamanan.
+        Menguasai tools seperti Metasploit, Burp Suite, Nmap, Hydra, dan Wireshark.`
     }
 };
 
 function openSkill(key) {
-    detailBox.style.display = "block";
-    detailBox.innerHTML = `
-        <h3>${skillDetail[key].title}</h3>
-        <p>${skillDetail[key].text}</p>
+    const detail = document.getElementById("detail");
+    const data = skillData[key];
+
+    detail.innerHTML = `
+        <div class="detail-card">
+            <h2>${data.title}</h2>
+            <p>${data.desc}</p>
+        </div>
     `;
 
-    window.location.href = "#detail";  
+    detail.scrollIntoView({ behavior: "smooth" });
 }
