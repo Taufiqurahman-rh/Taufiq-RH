@@ -1,53 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio — Taufiqurahman</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Taufiqurahman</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="img/avatar.png" alt="Avatar" class="avatar" />
+        <h1 class="name">Taufiqurahman</h1>
+        <p class="role">Cybersecurity Enthusiast • Networking</p>
 
-    <div class="container">
-
-        <!-- Foto Profil -->
-        <div class="left">
-            <img src="profil.png" alt="Foto Profil" class="profile-img">
+        <div class="contact">
+          <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a>
+          <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">linkedin.com/in/taufiqurahman-rahman</a>
         </div>
 
-        <!-- Konten -->
-        <div class="right">
-            <h1 class="name">Taufiqurahman</h1>
-            <p class="role">Cybersecurity Enthusiast • Networking</p>
-
-            <p class="desc">
-                Saya memiliki minat besar pada dunia cybersecurity, penetration testing,
-                CTF, exploit, serta sistem jaringan. Fokus saya adalah memperdalam skill
-                melalui praktik langsung, eksperimen, dan berbagai project pribadi.
-            </p>
-
-            <h2 class="sub">Keahlian</h2>
-            <ul class="skills">
-                <li>Cybersecurity</li>
-                <li>Penetration Testing</li>
-                <li>CTF & Exploit</li>
-                <li>Networking (Cisco / Mikrotik)</li>
-                <li>Linux Administration</li>
-                <li>Ethical Hacking</li>
-            </ul>
-
-            <h2 class="sub">Kontak</h2>
-            <div class="contact">
-                <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
-                <p>LinkedIn: 
-                    <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">
-                        Taufiqurahman
-                    </a>
-                </p>
-            </div>
+        <div class="skills-short">
+          <h3>Skill</h3>
+          <ul>
+            <li>Penetration Testing</li>
+            <li>CTF / Forensics</li>
+            <li>Networking (Cisco/Mikrotik)</li>
+            <li>Linux & Tools (Nmap, Wireshark)</li>
+          </ul>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <div class="download-cv">
+          <a href="#" class="btn">Download CV</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      <section class="intro">
+        <div class="intro-card">
+          <h2>Halo — saya Taufiq</h2>
+          <p>
+            Saya tertarik pada dunia cybersecurity, pentest, exploit, CTF, dan networking.
+            Di sini saya menyimpan write-up CTF, proyek jaringan, dan catatan pembelajaran.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2 class="section-title">Project & Write-up</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>CTF Write-up — Web Exploit</h3>
+            <p>Write-up lengkap: XSS & authentication bypass pada challenge lokal.</p>
+            <a class="link" href="#">Lihat Repo</a>
+          </article>
+
+          <article class="card">
+            <h3>Network Lab — VLAN & Routing</h3>
+            <p>Topologi VLAN, konfigurasi switch & router (Packet Tracer dan dokumentasi).</p>
+            <a class="link" href="#">Lihat File</a>
+          </article>
+
+          <article class="card">
+            <h3>Pentest Lab — Nmap & Enumeration</h3>
+            <p>Contoh workflow scanning, enumerasi service, dan analisis hasil.</p>
+            <a class="link" href="#">Lihat</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="about">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="card">
+          <p>
+            Saya adalah seorang yang aktif belajar melalui praktik. Suka mengikuti CTF untuk
+            melatih problem solving dan mendalami tooling pentest. Selain itu saya mempelajari
+            setup jaringan, troubleshooting, dan keamanan infrastruktur.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <h2 class="section-title">Kontak</h2>
+        <div class="card">
+          <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Profil LinkedIn</a></p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © 2025 — Taufiqurahman
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
