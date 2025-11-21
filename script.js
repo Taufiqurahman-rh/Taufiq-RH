@@ -1,30 +1,37 @@
-// ============================
-//  Smooth Scroll Animation
-// ============================
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
-});
+const words = [
+    "Cybersecurity Enthusiast",
+    "Ethical Hacker Beginner",
+    "Networking",
+    "CTF Player"
+];
 
-// ============================
-//  Navbar shadow ketika scroll
-// ============================
-window.addEventListener('scroll', () => {
-    const header = document.querySelector(".hero");
-    if (window.scrollY > 50) {
-        header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.4)";
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+    const typing = document.getElementById("typing");
+
+    if (!isDeleting) {
+        current = words[i].slice(0, j++);
     } else {
-        header.style.boxShadow = "none";
+        current = words[i].slice(0, j--);
     }
-});
 
-// ============================
-//  Console message
-// ============================
-console.log("Portfolio Taufiqurahman Loaded Successfully!");
+    typing.textContent = current;
+
+    let speed = isDeleting ? 60 : 90;
+
+    if (j === words[i].length + 1) {
+        isDeleting = true;
+        speed = 1200;
+    } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+    }
+
+    setTimeout(type, speed);
+}
+
+type();
