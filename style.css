@@ -1,90 +1,150 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    background: #0a0f1e;
+}
+
+body {
+    background: #0f0f0f;
     color: white;
 }
 
+/* ================= HERO ================= */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #111, #1c1c1c);
 }
 
-.name {
-    font-size: 60px;
+.hero .name {
+    font-size: 48px;
     font-weight: 700;
-    color: #00eaff;
 }
 
-.role {
+.hero .role {
     font-size: 22px;
-    opacity: 0.85;
+    color: #00eaff;
+    margin-top: 5px;
 }
 
-.desc {
-    max-width: 700px;
+.hero .desc {
     margin: 20px auto;
-    opacity: 0.85;
+    max-width: 700px;
     font-size: 16px;
+    opacity: .8;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 22px;
+    margin-top: 25px;
+    padding: 12px 28px;
     background: #00eaff;
     color: #000;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.biodata, .skills-section, .contact-section {
-    padding: 60px 20px;
-    max-width: 900px;
+.btn:hover {
+    background: #00b8cc;
+}
+
+/* ================= BIODATA ================= */
+.biodata {
+    padding: 70px 20px;
+    text-align: center;
+    background: #141414;
+}
+
+.biodata h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.bio-text {
+    max-width: 800px;
     margin: auto;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+/* ================= SKILLS ================= */
+.skills-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
 .skill-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .skill-card {
-    background: #10182f;
+    background: #1c1c1c;
     padding: 18px;
     border-radius: 10px;
-    text-align: center;
     cursor: pointer;
-    border: 1px solid #00eaff33;
-    transition: 0.25s;
     font-weight: 600;
+    border: 1px solid #333;
+    transition: 0.3s;
 }
 
 .skill-card:hover {
-    border-color: #00eaff;
-    transform: translateY(-4px);
+    background: #00eaff;
+    color: #000;
 }
 
-.skill-detail {
+/* ================= DETAIL ================= */
+.detail {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
     display: none;
-    background: #0f162c;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
 }
 
-.skill-detail h3 {
-    color: #00eaff;
+.detail h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.contact-section a {
+.detail p {
+    line-height: 1.7;
+    opacity: .9;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    padding: 70px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact a {
     color: #00eaff;
     text-decoration: none;
+    font-size: 18px;
 }
 
-.contact-section a:hover {
-    text-decoration: underline;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0c0c0c;
+    opacity: .6;
+    font-size: 14px;
 }
