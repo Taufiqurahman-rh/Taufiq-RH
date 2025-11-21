@@ -4,145 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Taufiqurahman</title>
+
     <style>
         body {
             margin: 0;
             font-family: "Poppins", sans-serif;
-            background: #0a0f1f;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=60');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(3px);
             color: #fff;
-            overflow-x: hidden;
         }
-        /* Cyber grid background */
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(#0ff2 1px, transparent 1px),
-                              linear-gradient(90deg, #0ff2 1px, transparent 1px);
-            background-size: 40px 40px;
-            animation: gridMove 15s linear infinite;
-            z-index: -1;
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.75);
+            min-height: 100vh;
+            padding-bottom: 50px;
         }
-        @keyframes gridMove {
-            from { background-position: 0 0; }
-            to { background-position: 0 200px; }
-        }
-        /* Hero Section */
-        .hero {
+
+        header {
             text-align: center;
-            padding: 120px 20px;
+            padding: 100px 20px 60px;
         }
-        .hero h1 {
-            font-size: 3rem;
+
+        header h1 {
+            font-size: 48px;
             font-weight: 700;
-            animation: glow 3s ease-in-out infinite alternate;
         }
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #0ff; }
-            to { text-shadow: 0 0 25px #0ff; }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.8;
         }
-        .typing {
-            color: #00eaff;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            height: 28px;
-        }
-        /* Section */
+
         section {
-            padding: 60px 20px;
             max-width: 900px;
             margin: auto;
+            padding: 20px;
         }
+
         h2 {
             border-left: 4px solid #00eaff;
-            padding-left: 10px;
+            padding-left: 12px;
+            margin-bottom: 15px;
         }
+
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #0ff4;
+            background: rgba(255, 255, 255, 0.07);
             padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-            backdrop-filter: blur(4px);
-            transition: 0.3s;
+            border-radius: 10px;
+            border: 1px solid #00eaff44;
+            margin-bottom: 20px;
         }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #0ff;
+
+        .contact a {
+            color: #00eaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <div class="grid-bg"></div>
+    <div class="overlay">
 
-    <div class="hero">
-        <h1>Taufiqurahman</h1>
-        <div class="typing" id="typing"></div>
+        <header>
+            <h1>Taufiqurahman</h1>
+            <p>Cybersecurity Enthusiast • Networking</p>
+        </header>
+
+        <section>
+            <h2>Tentang Saya</h2>
+            <div class="card">
+                Saya memiliki minat besar dalam dunia cybersecurity, pentest, eksploitasi,
+                CTF, serta networking. Fokus saya adalah terus berkembang dan memperdalam
+                skill melalui project dan praktik langsung.
+            </div>
+        </section>
+
+        <section>
+            <h2>Keahlian</h2>
+            <div class="card">
+                • Cybersecurity<br>
+                • Penetration Testing<br>
+                • Capture The Flag (CTF)<br>
+                • Networking (Cisco / Mikrotik)<br>
+                • Linux Administration<br>
+                • Ethical Hacking
+            </div>
+        </section>
+
+        <section>
+            <h2>Kontak</h2>
+            <div class="card contact">
+                Gmail: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a><br><br>
+                Linkedin: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Profil Linkedin Saya</a>
+            </div>
+        </section>
+
+        <footer>
+            © 2025 — Portofolio Taufiqurahman
+        </footer>
+
     </div>
-
-    <section>
-        <h2>Tentang Saya</h2>
-        <div class="card">
-            Saya adalah seorang siswa jurusan TKJ dengan minat tinggi pada dunia
-            cybersecurity, penetration testing, exploit, CTF, dan networking.
-            Saya terus belajar dan mengembangkan skill di dunia keamanan siber.
-        </div>
-    </section>
-
-    <section>
-        <h2>Keahlian</h2>
-        <div class="card">
-            • Ethical Hacking<br>
-            • Penetration Testing<br>
-            • Capture The Flag (CTF)<br>
-            • Exploit Development<br>
-            • Networking (Cisco / Mikrotik)<br>
-            • Linux
-        </div>
-    </section>
-
-    <script>
-        const words = [
-            "Cybersecurity Enthusiast",
-            "Ethical Hacker Beginner",
-            "CTF Player",
-            "Networking Lover"
-        ];
-        let i = 0;
-        let j = 0;
-        let current = "";
-        let isDeleting = false;
-
-        function type() {
-            const typing = document.getElementById("typing");
-
-            if (!isDeleting && j < words[i].length) {
-                current += words[i][j];
-                j++;
-            } else if (isDeleting && j > 0) {
-                current = current.slice(0, -1);
-                j--;
-            }
-
-            typing.textContent = current;
-
-            if (j === words[i].length && !isDeleting) {
-                isDeleting = true;
-                setTimeout(type, 1200);
-                return;
-            }
-
-            if (isDeleting && j === 0) {
-                isDeleting = false;
-                i = (i + 1) % words.length;
-            }
-
-            setTimeout(type, isDeleting ? 60 : 90);
-        }
-
-        type();
-    </script>
 </body>
 </html>
