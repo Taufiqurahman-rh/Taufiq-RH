@@ -1,123 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Taufiqurahman</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: #05070d;
-            color: #fff;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 120px 20px;
-            background: linear-gradient(180deg, #0e1628, #05070d);
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-
-        /* Layout Baru Modern */
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 28px;
-            margin: 40px 0 20px;
-            border-left: 5px solid #00eaff;
-            padding-left: 12px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #0e1422;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #0ff3;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: #00eaff;
-            transform: translateY(-5px);
-        }
-
-        /* Contact Box */
-        .contact a {
-            color: #00eaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            opacity: 0.6;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Taufiqurahman</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="img/avatar.png" alt="Avatar" class="avatar" />
+        <h1 class="name">Taufiqurahman</h1>
+        <p class="role">Cybersecurity Enthusiast • Networking</p>
 
-    <header class="hero">
-        <h1>Taufiqurahman</h1>
-        <p>Cybersecurity Enthusiast • Networking</p>
-    </header>
+        <div class="contact">
+          <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a>
+          <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">linkedin.com/in/taufiqurahman-rahman</a>
+        </div>
 
+        <div class="skills-short">
+          <h3>Skill</h3>
+          <ul>
+            <li>Penetration Testing</li>
+            <li>CTF / Forensics</li>
+            <li>Networking (Cisco/Mikrotik)</li>
+            <li>Linux & Tools (Nmap, Wireshark)</li>
+          </ul>
+        </div>
 
-    <div class="container">
+        <div class="download-cv">
+          <a href="#" class="btn">Download CV</a>
+        </div>
+      </div>
+    </aside>
 
+    <!-- Main content -->
+    <main class="content">
+      <section class="intro">
+        <div class="intro-card">
+          <h2>Halo — saya Taufiq</h2>
+          <p>
+            Saya tertarik pada dunia cybersecurity, pentest, exploit, CTF, dan networking.
+            Di sini saya menyimpan write-up CTF, proyek jaringan, dan catatan pembelajaran.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2 class="section-title">Project & Write-up</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>CTF Write-up — Web Exploit</h3>
+            <p>Write-up lengkap: XSS & authentication bypass pada challenge lokal.</p>
+            <a class="link" href="#">Lihat Repo</a>
+          </article>
+
+          <article class="card">
+            <h3>Network Lab — VLAN & Routing</h3>
+            <p>Topologi VLAN, konfigurasi switch & router (Packet Tracer dan dokumentasi).</p>
+            <a class="link" href="#">Lihat File</a>
+          </article>
+
+          <article class="card">
+            <h3>Pentest Lab — Nmap & Enumeration</h3>
+            <p>Contoh workflow scanning, enumerasi service, dan analisis hasil.</p>
+            <a class="link" href="#">Lihat</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="about">
         <h2 class="section-title">Tentang Saya</h2>
         <div class="card">
-            Saya memiliki minat besar dalam dunia cybersecurity, pentest, eksploitasi,
-            CTF, serta networking. Fokus saya adalah terus berkembang dan memperdalam
-            skill melalui project dan praktik langsung.
+          <p>
+            Saya adalah seorang yang aktif belajar melalui praktik. Suka mengikuti CTF untuk
+            melatih problem solving dan mendalami tooling pentest. Selain itu saya mempelajari
+            setup jaringan, troubleshooting, dan keamanan infrastruktur.
+          </p>
         </div>
+      </section>
 
-
-        <h2 class="section-title">Keahlian</h2>
-        <div class="grid">
-            <div class="card">Cybersecurity</div>
-            <div class="card">Penetration Testing</div>
-            <div class="card">Capture The Flag (CTF)</div>
-            <div class="card">Networking (Cisco / Mikrotik)</div>
-            <div class="card">Linux Admin</div>
-            <div class="card">Ethical Hacking</div>
-        </div>
-
-
+      <section class="contact-section">
         <h2 class="section-title">Kontak</h2>
-        <div class="card contact">
-            Gmail: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a><br><br>
-            Linkedin: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Profil Linkedin Saya</a>
+        <div class="card">
+          <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Profil LinkedIn</a></p>
         </div>
+      </section>
 
-    </div>
+      <footer class="footer">
+        © 2025 — Taufiqurahman
+      </footer>
+    </main>
+  </div>
 
-    <footer>
-        © 2025 — Portofolio Taufiqurahman
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
