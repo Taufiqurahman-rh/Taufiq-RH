@@ -1,29 +1,30 @@
-// Efek animasi smooth saat klik tombol "Lihat Project"
-document.querySelector(".btn").addEventListener("click", function () {
-    window.scrollTo({
-        top: document.querySelector("#projects").offsetTop - 20,
-        behavior: "smooth"
+// ============================
+//  Smooth Scroll Animation
+// ============================
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
     });
 });
 
-// Efek fade-in sederhana untuk semua section
-const sections = document.querySelectorAll(".section");
-
-function showSections() {
-    sections.forEach(sec => {
-        const secPos = sec.getBoundingClientRect().top;
-        if (secPos < window.innerHeight - 100) {
-            sec.style.opacity = "1";
-            sec.style.transform = "translateY(0)";
-        }
-    });
-}
-
-window.addEventListener("scroll", showSections);
-
-// Set initial hidden style
-sections.forEach(sec => {
-    sec.style.opacity = "0";
-    sec.style.transform = "translateY(40px)";
-    sec.style.transition = "0.8s";
+// ============================
+//  Navbar shadow ketika scroll
+// ============================
+window.addEventListener('scroll', () => {
+    const header = document.querySelector(".hero");
+    if (window.scrollY > 50) {
+        header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.4)";
+    } else {
+        header.style.boxShadow = "none";
+    }
 });
+
+// ============================
+//  Console message
+// ============================
+console.log("Portfolio Taufiqurahman Loaded Successfully!");
