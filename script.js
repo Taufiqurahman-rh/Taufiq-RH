@@ -1,10 +1,15 @@
-// Efek glow saat hover pada nama
-const name = document.querySelector('.name');
+function openSkill(id) {
+    const allDetails = document.querySelectorAll('.skill-detail');
 
-name.addEventListener('mouseover', () => {
-    name.style.textShadow = "0 0 25px #00eaff";
-});
+    // Sembunyikan semua
+    allDetails.forEach(detail => {
+        detail.style.display = "none";
+    });
 
-name.addEventListener('mouseout', () => {
-    name.style.textShadow = "none";
-});
+    // Tampilkan yang dipilih
+    const selected = document.getElementById(id);
+    if (selected) {
+        selected.style.display = "block";
+        window.location.href = "#detail"; // auto scroll
+    }
+}
