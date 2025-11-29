@@ -1,150 +1,89 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
-    background: #0f0f0f;
+    background: #0f0f0f url('https://static.vecteezy.com/system/resources/previews/004/224/146/original/abstract-cyber-technology-background-free-vector.jpg') no-repeat center/cover;
+    font-family: "Poppins", sans-serif;
     color: white;
 }
 
-/* ================= HERO ================= */
 .hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: linear-gradient(135deg, #111, #1c1c1c);
+    text-align:center;
+    padding:120px 20px;
+    backdrop-filter: blur(4px);
 }
 
-.hero .name {
-    font-size: 48px;
+.glow-title {
+    font-size: 55px;
     font-weight: 700;
-}
-
-.hero .role {
-    font-size: 22px;
     color: #00eaff;
-    margin-top: 5px;
+    text-shadow: 0 0 20px #00eaff;
 }
 
-.hero .desc {
-    margin: 20px auto;
+.glow-sub { font-size:22px; margin-top:10px; color:#6df2ff; }
+
+.hero-desc {
     max-width: 700px;
-    font-size: 16px;
-    opacity: .8;
+    margin: 20px auto;
+    font-size: 18px;
+    opacity: 0.85;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 28px;
-    background: #00eaff;
-    color: #000;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    border:1px solid #00eaff;
+    color:#00eaff;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:0.3s;
+}
+.btn:hover { background:#00eaff; color:black; }
+
+.bio-section, .skills-section {
+    padding:60px 20px;
+    text-align:center;
+    background: rgba(0,0,0,0.55);
 }
 
-.btn:hover {
-    background: #00b8cc;
-}
-
-/* ================= BIODATA ================= */
-.biodata {
-    padding: 70px 20px;
-    text-align: center;
-    background: #141414;
-}
-
-.biodata h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.bio-text {
-    max-width: 800px;
-    margin: auto;
-    opacity: 0.9;
-    line-height: 1.7;
-}
-
-/* ================= SKILLS ================= */
-.skills-section {
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.skills-section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.skill-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
+.skills-grid {
     max-width: 900px;
-    margin: auto;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap:20px;
 }
 
 .skill-card {
-    background: #1c1c1c;
-    padding: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    border: 1px solid #333;
-    transition: 0.3s;
+    background: rgba(0, 255, 255, 0.1);
+    padding:18px;
+    border:1px solid #00eaff;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
 }
-
 .skill-card:hover {
-    background: #00eaff;
-    color: #000;
+    background:#00eaff;
+    color:black;
+    transform: translateY(-5px);
 }
 
-/* ================= DETAIL ================= */
-.detail {
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: auto;
-    display: none;
+.detail-box {
+    background: rgba(0,0,0,0.75);
+    border:1px solid #00eaff;
+    width:80%;
+    margin:20px auto;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
 }
-
-.detail h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.detail p {
-    line-height: 1.7;
-    opacity: .9;
-}
-
-/* ================= CONTACT ================= */
-.contact {
-    padding: 70px 20px;
-    background: #111;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contact a {
-    color: #00eaff;
-    text-decoration: none;
-    font-size: 18px;
-}
+.hidden { display:none; }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #0c0c0c;
-    opacity: .6;
-    font-size: 14px;
+    text-align:center;
+    padding:30px;
+    background:black;
+    margin-top:50px;
 }
+footer a { color:#00eaff; }
+footer a:hover { text-decoration:underline; }
