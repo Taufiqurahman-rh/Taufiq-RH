@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio — Taufiqurahman</title>
+    <title>Portofolio — Taufiqurahman RH</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <h2 class="logo">Taufiq<span>RH</span></h2>
-        <a href="#skills" class="nav-btn">Keahlian</a>
-        <a href="#contact" class="nav-btn">Kontak</a>
+        <h2 class="logo">Taufiq RH</h2>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
     </nav>
 
-    <header class="hero">
-        <div class="hero-text">
-            <h1>Halo, Saya <span>Taufiqurahman</span></h1>
-            <h3>Cybersecurity Enthusiast & Networking</h3>
-            <p>
-                Aktif belajar dan mendalami dunia keamanan digital, eksplorasi CTF, Pentesting, Ethical
-                Hacking, serta analisis jaringan. Berpengalaman menggunakan tool seperti Nmap, Wireshark, dan Kali Linux.
-            </p>
-            <a href="#skills" class="btn">Lihat Keahlian</a>
-        </div>
-    </header>
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+        <h1>Halo 👋 Saya <span>Taufiqurahman</span></h1>
+        <p class="role">Cybersecurity Enthusiast & Networking</p>
+        <p class="desc">
+            Fokus pada Ethical Hacking, CTF, Pentesting, serta analisis dan keamanan jaringan.
+            Aktif belajar dan mengeksplorasi dunia keamanan sistem digital.
+        </p>
+        <a href="#skills" class="btn">Lihat Keahlian</a>
+    </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="skills-section">
         <h2>Keahlian Saya</h2>
-        <p class="skill-desc">Klik salah satu kartu untuk melihat detail skill</p>
 
         <div class="skill-list">
             <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
@@ -37,23 +40,25 @@
             <div class="skill-card" onclick="openSkill('nmap')">Nmap</div>
             <div class="skill-card" onclick="openSkill('wireshark')">Wireshark</div>
             <div class="skill-card" onclick="openSkill('networking')">Networking</div>
-            <div class="skill-card" onclick="openSkill('linux')">Kali Linux & Tools</div>
+            <div class="skill-card" onclick="openSkill('linux')">Kali Linux</div>
+        </div>
+
+        <div class="skill-detail" id="detail">
+            <p>Klik salah satu keahlian untuk melihat detail</p>
         </div>
     </section>
 
-    <section id="detail" class="detail"></section>
-
+    <!-- CONTACT -->
     <section id="contact" class="contact">
-        <h2>Kontak Saya</h2>
-        <p>Email: <b>rahm4n22@gmail.com</b></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Klik di sini</a></p>
-        <p>GitHub: <a href="https://taufiqurahman-rh.github.io" target="_blank">taufiqurahman-rh.github.io</a></p>
+        <h2>Hubungi Saya</h2>
+        <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Taufiqurahman RH</a></p>
     </section>
 
     <footer>
         <p>© 2025 Taufiqurahman — Cybersecurity Enthusiast</p>
     </footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
