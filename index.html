@@ -9,16 +9,19 @@
 <body>
 
     <header class="hero">
-        <h1 class="name">Taufiqurahman</h1>
-        <p class="role">Cybersecurity Enthusiast</p>
-        <p class="desc">Berfokus pada Ethical Hacking, Pentesting, CTF, dan dunia jaringan. Saya menyukai eksplorasi celah keamanan, melakukan analisis, dan mempelajari serangan serta pertahanan sistem.</p>
-
+        <h1 class="glow-title">Taufiqurahman</h1>
+        <p class="glow-sub">Cybersecurity Enthusiast & Networking</p>
+        <p class="hero-desc">
+            Berfokus pada Ethical Hacking, Pentesting, CTF, dan dunia jaringan.
+            Aktif mempelajari keamanan digital, analisis kerentanan, eksploitasi,
+            dan memperkuat sistem dari ancaman serangan.
+        </p>
         <a href="#skills" class="btn">Lihat Keahlian</a>
     </header>
 
-    <section class="biodata">
+    <section class="bio-section">
         <h2>Biodata Diri</h2>
-        <p class="bio-text">
+        <p>
             Saya adalah seorang <b>Cybersecurity Enthusiast</b> yang aktif belajar dan mendalami dunia keamanan digital.
             Saya suka mengeksplorasi <b>CTF, Pentesting, Ethical Hacking, Networking</b>, serta berbagai tools seperti
             <b>Nmap, Wireshark, dan Kali Linux</b>. Saya memiliki ketertarikan tinggi pada analisis kerentanan,
@@ -26,64 +29,29 @@
         </p>
     </section>
 
-    <section class="skills-section" id="skills">
+    <section id="skills" class="skills-section">
         <h2>Keahlian Saya</h2>
-        <div class="skill-list">
-            <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
-            <div class="skill-card" onclick="openSkill('ctf')">CTF (Capture The Flag)</div>
-            <div class="skill-card" onclick="openSkill('pentest')">Pentesting</div>
-            <div class="skill-card" onclick="openSkill('nmap')">Nmap</div>
-            <div class="skill-card" onclick="openSkill('wireshark')">Wireshark</div>
-            <div class="skill-card" onclick="openSkill('networking')">Networking</div>
-            <div class="skill-card" onclick="openSkill('linux')">Linux</div>
+
+        <div class="skills-grid">
+            <div class="skill-card" onclick="showDetail('ethical')">Ethical Hacking</div>
+            <div class="skill-card" onclick="showDetail('ctf')">CTF</div>
+            <div class="skill-card" onclick="showDetail('pentest')">Pentesting</div>
+            <div class="skill-card" onclick="showDetail('nmap')">Nmap</div>
+            <div class="skill-card" onclick="showDetail('wireshark')">Wireshark</div>
+            <div class="skill-card" onclick="showDetail('networking')">Networking</div>
+            <div class="skill-card" onclick="showDetail('linux')">Kali Linux & Security Tools</div>
         </div>
     </section>
 
-    <section class="detail" id="detail">
-    <!-- Deskripsi Lengkap Skill -->
-    <div id="ethical" class="skill-detail">
-        <h3>Ethical Hacking</h3>
-        <p>Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan bekerja dan bagaimana memperkuat pertahanan sistem dari ancaman nyata.</p>
-    </div>
+    <section id="detail-box" class="detail-box hidden"></section>
 
-    <div id="ctf" class="skill-detail">
-        <h3>CTF (Capture The Flag)</h3>
-        <p>Sering bermain berbagai jenis CTF untuk meningkatkan kemampuan eksploitasi, analisis sistem, kriptografi, forensic, dan network analysis.</p>
-    </div>
-
-    <div id="pentest" class="skill-detail">
-        <h3>Pentesting</h3>
-        <p>Menguasai alur pentest mulai dari reconnaissance, scanning, enumeration, exploitation, hingga reporting untuk menemukan dan menilai kerentanan.</p>
-    </div>
-
-    <div id="nmap" class="skill-detail">
-        <h3>Nmap</h3>
-        <p>Berpengalaman memetakan jaringan, mendeteksi service, port terbuka, serta mengidentifikasi celah keamanan menggunakan berbagai macam scan dari Nmap.</p>
-    </div>
-
-    <div id="wireshark" class="skill-detail">
-        <h3>Wireshark</h3>
-        <p>Mampu membaca dan menganalisis paket jaringan untuk troubleshooting, investigasi aktivitas mencurigakan, serta memahami pola komunikasi di jaringan.</p>
-    </div>
-
-    <div id="networking" class="skill-detail">
-        <h3>Networking</h3>
-        <p>Mengkonfigurasi router dan switch (Cisco), memahami VLAN, routing, subnetting, firewall dasar, dan keamanan jaringan.</p>
-    </div>
-
-    <div id="linux" class="skill-detail">
-        <h3>Kali Linux & Security Tools</h3>
-        <p>Terbiasa menggunakan Kali Linux serta tools seperti Metasploit, Burp Suite, Wireshark, dan Nmap untuk analisis keamanan mendalam.</p>
-    </div>
-</section>
+    <footer>
+        <h3>Kontak</h3>
+        <p>Email : <b>rahm4n22@gmail.com</b></p>
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Lihat Profil</a></p>
+        <p class="footer-note">© 2025 – Taufiqurahman</p>
+    </footer>
 
     <script src="script.js"></script>
-<section class="contact-section">
-    <h2>Kontak Saya</h2>
-    <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Taufiqurahman</a></p>
-</section>
-
 </body>
 </html>
-
