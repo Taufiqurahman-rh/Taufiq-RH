@@ -5,37 +5,37 @@ document.addEventListener("DOMContentLoaded", () => {
     ctf: {
       title: "CTF (Capture The Flag)",
       text:
-        "Sering bermain dan mempelajari berbagai jenis CTF untuk meningkatkan kemampuan eksploitasi, analisis sistem, dan pemecahan masalah. Terbiasa menemukan FLAG pada kategori web exploitation, cryptography, forensic, maupun network analysis."
+        "Saya sering bermain dan mempelajari berbagai kategori CTF seperti Web Exploitation, Cryptography, Forensic, hingga Network Security. Bermain CTF membantu saya memahami bagaimana kerentanan bekerja dan cara menemukan FLAG melalui teknik eksploitasi dan analisis sistem."
     },
     pentest: {
       title: "Pentest (Penetration Testing)",
       text:
-        "Menguasai proses pengujian keamanan sistem mulai dari reconnaissance, scanning, exploitation, hingga reporting untuk mengidentifikasi dan menilai kerentanan."
+        "Berpengalaman melakukan pengujian keamanan untuk mengidentifikasi celah sistem melalui tahapan reconnaissance, scanning, exploitation, dan reporting untuk menemukan serta menilai tingkat risiko pada sistem."
     },
     ethical: {
       title: "Ethical Hacking",
       text:
-        "Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan bekerja dan bagaimana memperkuat pertahanan sistem dari ancaman."
+        "Menerapkan teknik hacking secara legal dan etis untuk meningkatkan keamanan sistem. Memahami bagaimana serangan bekerja agar dapat membuat pertahanan yang lebih kuat dan efektif."
     },
     nmap: {
       title: "Nmap",
       text:
-        "Berpengalaman menggunakan Nmap untuk memetakan jaringan, mendeteksi port dan service terbuka, serta mengidentifikasi potensi celah keamanan."
+        "Menggunakan Nmap untuk scanning jaringan, service enumeration, hingga deteksi kerentanan awal melalui informasi port dan sistem yang terbuka."
     },
     wireshark: {
       title: "Wireshark",
       text:
-        "Mampu melakukan analisis paket jaringan untuk troubleshooting, investigasi aktivitas mencurigakan, dan memahami pola komunikasi di dalam jaringan."
+        "Menganalisa traffic jaringan untuk mendeteksi aktivitas mencurigakan, troubleshooting koneksi, dan memahami pola komunikasi dalam jaringan."
     },
     networking: {
       title: "Networking (Cisco, Mikrotik, dll)",
       text:
-        "Mampu mengkonfigurasi perangkat jaringan seperti router dan switch, memahami konsep VLAN, routing, subnetting, hingga keamanan jaringan dasar."
+        "Mampu mengkonfigurasi jaringan, router, switch, firewall, memahami VLAN, subnetting, routing protocol, dan teknik pengamanan jaringan dasar."
     },
     linux: {
       title: "Kali Linux & Security Tools",
       text:
-        "Terbiasa menggunakan Kali Linux sebagai sistem utama untuk analisis keamanan, termasuk tools seperti Metasploit, Nmap, Wireshark, dan Burp Suite."
+        "Terbiasa menggunakan Kali Linux dan berbagai tools seperti Metasploit, Burp Suite, Nmap, Hydra, John The Ripper, dan Wireshark untuk analisis keamanan sistem."
     }
   };
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="detail-card">
         <h2>${s.title}</h2>
         <p>${s.text}</p>
-        <p><strong>Kenapa saya tertarik:</strong> Karena pemahaman mendalam tentang bagaimana serangan bekerja memberikan fondasi kuat dalam membangun pertahanan yang efektif.</p>
+        <p><strong>Alasan saya tertarik bidang ini:</strong> Karena memahami cara kerja serangan dan celah keamanan adalah fondasi penting untuk membangun sistem yang kuat dan aman.</p>
       </div>
     `;
     detailArea.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // ======================= DARK MODE ================================
+  // ======================== DARK MODE ================================
   const btnMode = document.getElementById("btnMode");
   btnMode.addEventListener("click", () => {
     document.body.classList.toggle("dark");
