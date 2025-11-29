@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio — Taufiqurahman</title>
+    <title>Taufiqurahman — Cybersecurity Enthusiast</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero">
-        <h1 class="glow-title">Taufiqurahman</h1>
-        <p class="glow-sub">Cybersecurity Enthusiast & Networking</p>
-        <p class="hero-desc">
-            Berfokus pada Ethical Hacking, Pentesting, CTF, dan dunia jaringan.
-            Aktif mempelajari keamanan digital, analisis kerentanan, eksploitasi,
-            dan memperkuat sistem dari ancaman serangan.
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Taufiqurahman</h1>
+        <p class="sub">Cybersecurity Enthusiast & Networking</p>
+        <p class="intro">
+            Fokus pada dunia keamanan siber, eksplorasi kerentanan, analisis jaringan, dan pemahaman sistem secara mendalam.
         </p>
         <a href="#skills" class="btn">Lihat Keahlian</a>
-    </header>
+    </div>
+</header>
 
-    <section class="bio-section">
-        <h2>Biodata Diri</h2>
-        <p>
-            Saya adalah seorang <b>Cybersecurity Enthusiast</b> yang aktif belajar dan mendalami dunia keamanan digital.
-            Saya suka mengeksplorasi <b>CTF, Pentesting, Ethical Hacking, Networking</b>, serta berbagai tools seperti
-            <b>Nmap, Wireshark, dan Kali Linux</b>. Saya memiliki ketertarikan tinggi pada analisis kerentanan,
-            investigasi jaringan, dan pemahaman sistem secara mendalam.
-        </p>
-    </section>
+<section class="biodata">
+    <h2>Biodata Diri</h2>
+    <p>
+        Saya adalah seorang <b>Cybersecurity Enthusiast</b> yang aktif belajar dan mendalami dunia keamanan digital.
+        Saya suka mengeksplorasi <b>CTF, Pentesting, Ethical Hacking, Networking</b>, serta berbagai tools seperti
+        <b>Nmap, Wireshark, dan Kali Linux</b>. Saya memiliki ketertarikan tinggi pada analisis kerentanan,
+        investigasi jaringan, dan pemahaman sistem secara mendalam.
+    </p>
+</section>
 
-    <section id="skills" class="skills-section">
-        <h2>Keahlian Saya</h2>
+<section id="skills" class="skills">
+    <h2>Keahlian</h2>
+    <div class="skill-container">
+        <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
+        <div class="skill-card" onclick="openSkill('ctf')">CTF (Capture The Flag)</div>
+        <div class="skill-card" onclick="openSkill('pentest')">Penetration Testing</div>
+        <div class="skill-card" onclick="openSkill('nmap')">Nmap</div>
+        <div class="skill-card" onclick="openSkill('wireshark')">Wireshark</div>
+        <div class="skill-card" onclick="openSkill('networking')">Networking</div>
+        <div class="skill-card" onclick="openSkill('linux')">Kali Linux & Tools</div>
+    </div>
+</section>
 
-        <div class="skills-grid">
-            <div class="skill-card" onclick="showDetail('ethical')">Ethical Hacking</div>
-            <div class="skill-card" onclick="showDetail('ctf')">CTF</div>
-            <div class="skill-card" onclick="showDetail('pentest')">Pentesting</div>
-            <div class="skill-card" onclick="showDetail('nmap')">Nmap</div>
-            <div class="skill-card" onclick="showDetail('wireshark')">Wireshark</div>
-            <div class="skill-card" onclick="showDetail('networking')">Networking</div>
-            <div class="skill-card" onclick="showDetail('linux')">Kali Linux & Security Tools</div>
-        </div>
-    </section>
+<section id="detail" class="detail"></section>
 
-    <section id="detail-box" class="detail-box hidden"></section>
+<footer class="footer">
+    <h2>Kontak</h2>
+    <p>Email: <b>rahm4n22@gmail.com</b></p>
+    <p>LinkedIn: 
+        <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353/" target="_blank">Klik di sini</a>
+    </p>
+</footer>
 
-    <footer>
-        <h3>Kontak</h3>
-        <p>Email : <b>rahm4n22@gmail.com</b></p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Lihat Profil</a></p>
-        <p class="footer-note">© 2025 – Taufiqurahman</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
