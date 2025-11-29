@@ -8,49 +8,62 @@
 </head>
 <body>
 
-<header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>Taufiqurahman</h1>
-        <p class="sub">Cybersecurity Enthusiast & Networking</p>
-        <p class="intro">
-            Fokus pada dunia keamanan siber, eksplorasi kerentanan, analisis jaringan, dan pemahaman sistem secara mendalam.
-        </p>
-        <a href="#skills" class="btn">Lihat Keahlian</a>
-    </div>
+<nav class="navbar">
+    <h2 class="logo">Taufiq <span>RH</span></h2>
+    <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
+
+<header id="home" class="hero">
+    <h1>Cybersecurity Enthusiast & Networking</h1>
+    <p class="sub">
+        Fokus pada Ethical Hacking, Pentesting, CTF, Investigasi Jaringan, serta analisis kerentanan.
+    </p>
+    <a href="#skills" class="btn">Lihat Keahlian</a>
 </header>
 
 <section class="biodata">
     <h2>Biodata Diri</h2>
     <p>
-        Saya adalah seorang <b>Cybersecurity Enthusiast</b> yang aktif belajar dan mendalami dunia keamanan digital.
-        Saya suka mengeksplorasi <b>CTF, Pentesting, Ethical Hacking, Networking</b>, serta berbagai tools seperti
-        <b>Nmap, Wireshark, dan Kali Linux</b>. Saya memiliki ketertarikan tinggi pada analisis kerentanan,
-        investigasi jaringan, dan pemahaman sistem secara mendalam.
+        Saya adalah seorang <b>Cybersecurity Enthusiast</b> yang aktif mendalami keamanan digital.
+        Sering mengeksplorasi dunia <b>Ethical Hacking, Pentesting, Capture The Flag (CTF),
+        Networking</b> serta penggunaan tools analisis seperti 
+        <b>Nmap, Wireshark, dan Kali Linux</b>. Memiliki minat besar dalam
+        memahami celah keamanan sistem dan bagaimana cara melindunginya.
     </p>
 </section>
 
-<section id="skills" class="skills">
-    <h2>Keahlian</h2>
-    <div class="skill-container">
+<section id="skills" class="skills-section">
+    <h2>Keahlian Saya</h2>
+
+    <div class="skill-list">
         <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
         <div class="skill-card" onclick="openSkill('ctf')">CTF (Capture The Flag)</div>
-        <div class="skill-card" onclick="openSkill('pentest')">Penetration Testing</div>
+        <div class="skill-card" onclick="openSkill('pentest')">Pentesting</div>
         <div class="skill-card" onclick="openSkill('nmap')">Nmap</div>
         <div class="skill-card" onclick="openSkill('wireshark')">Wireshark</div>
         <div class="skill-card" onclick="openSkill('networking')">Networking</div>
-        <div class="skill-card" onclick="openSkill('linux')">Kali Linux & Tools</div>
+        <div class="skill-card" onclick="openSkill('linux')">Kali Linux</div>
     </div>
+
+    <div id="detail" class="detail-box"></div>
 </section>
 
-<section id="detail" class="detail"></section>
-
-<footer class="footer">
-    <h2>Kontak</h2>
+<section id="contact" class="contact">
+    <h2>Kontak Saya</h2>
     <p>Email: <b>rahm4n22@gmail.com</b></p>
     <p>LinkedIn: 
-        <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353/" target="_blank">Klik di sini</a>
+        <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">
+            Lihat Profil
+        </a>
     </p>
+</section>
+
+<footer>
+    <p>© 2025 Taufiqurahman — All Rights Reserved</p>
 </footer>
 
 <script src="script.js"></script>
