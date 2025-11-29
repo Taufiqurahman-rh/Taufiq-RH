@@ -1,53 +1,15 @@
-const skillData = {
-    ethical: {
-        title: "Ethical Hacking",
-        desc: `Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan bekerja,
-        bagaimana celah dieksploitasi, dan bagaimana sistem dapat diperkuat. Fokus pada mindset penyerang
-        untuk meningkatkan pertahanan keamanan.`
-    },
-    ctf: {
-        title: "CTF (Capture The Flag)",
-        desc: `Sering mengikuti berbagai jenis CTF untuk meningkatkan kemampuan eksploitasi, analisis,
-        debugging, dan problem solving. Terbiasa dengan kategori Web Exploitation, Forensic, Cryptography,
-        hingga Network Analysis.`
-    },
-    pentest: {
-        title: "Pentesting",
-        desc: `Menguasai proses pentest mulai dari reconnaissance, scanning, enumeration, exploitation,
-        privilege escalation, hingga reporting untuk menemukan serta menilai kerentanan pada sistem.`
-    },
-    nmap: {
-        title: "Nmap",
-        desc: `Berpengalaman menggunakan Nmap untuk scanning port, service detection, OS fingerprinting,
-        network mapping, dan menemukan potensi kerentanan pada sebuah jaringan.`
-    },
-    wireshark: {
-        title: "Wireshark",
-        desc: `Mampu melakukan analisis paket jaringan untuk troubleshooting, investigasi aktivitas mencurigakan,
-        hingga memahami pola komunikasi antar host secara mendalam.`
-    },
-    networking: {
-        title: "Networking",
-        desc: `Memahami konsep jaringan seperti VLAN, routing, ACL, subnetting, switching, hingga keamanan jaringan.
-        Mampu mengkonfigurasi router dan switch (terutama Cisco).`
-    },
-    linux: {
-        title: "Linux & Tools Keamanan",
-        desc: `Terbiasa menggunakan Linux (terutama Kali Linux) sebagai sistem utama untuk analisis keamanan.
-        Menguasai tools seperti Metasploit, Burp Suite, Nmap, Hydra, dan Wireshark.`
-    }
-};
+function showDetail(skill) {
+    const details = {
+        ethical: "<h2>Ethical Hacking</h2><p>Memahami cara kerja serangan dan menerapkannya secara etis untuk meningkatkan keamanan sistem. Berfokus pada menganalisis celah, meningkatkan pertahanan, dan mempelajari teknik serangan modern.</p>",
+        ctf: "<h2>CTF (Capture The Flag)</h2><p>Aktif mempelajari CTF untuk meningkatkan kemampuan eksploitasi, pemecahan masalah, analisis kerentanan, forensic, dan network analysis. Terbiasa menemukan FLAG di berbagai kategori.</p>",
+        pentest: "<h2>Pentesting</h2><p>Menguasai tahapan pengujian keamanan mulai dari reconnaissance, scanning, exploitation, hingga reporting untuk menilai dan mengevaluasi celah keamanan sistem.</p>",
+        nmap: "<h2>Nmap</h2><p>Mampu melakukan pemetaan jaringan, scanning port, pendeteksian service, dan analisis potensi kerentanan menggunakan Network Mapper (Nmap).</p>",
+        wireshark: "<h2>Wireshark</h2><p>Mampu menganalisis paket jaringan untuk troubleshooting, investigasi intrusi, dan memahami komunikasi pada level protokol jaringan.</p>",
+        networking: "<h2>Networking</h2><p>Mampu mengkonfigurasi router dan switch (Cisco), memahami VLAN, subnetting, routing, dan keamanan jaringan dasar.</p>",
+        linux: "<h2>Kali Linux & Security Tools</h2><p>Terbiasa menggunakan Kali Linux dalam operasi keamanan serta tools seperti Metasploit, Burp Suite, Wireshark, dan Nmap.</p>"
+    };
 
-function openSkill(key) {
-    const detail = document.getElementById("detail");
-    const data = skillData[key];
-
-    detail.innerHTML = `
-        <div class="detail-card">
-            <h2>${data.title}</h2>
-            <p>${data.desc}</p>
-        </div>
-    `;
-
-    detail.scrollIntoView({ behavior: "smooth" });
+    const box = document.getElementById("detail-box");
+    box.innerHTML = details[skill];
+    box.classList.remove("hidden");
 }
