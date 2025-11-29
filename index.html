@@ -3,64 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taufiqurahman — Cybersecurity Enthusiast</title>
+    <title>Portofolio — Taufiqurahman</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
         <h2 class="logo">Taufiq<span>RH</span></h2>
-        <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Biodata</a></li>
-            <li><a href="#skills">Keahlian</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
+        <a href="#skills" class="nav-btn">Keahlian</a>
+        <a href="#contact" class="nav-btn">Kontak</a>
     </nav>
 
-    <section class="home" id="home">
-        <div class="text">
+    <header class="hero">
+        <div class="hero-text">
             <h1>Halo, Saya <span>Taufiqurahman</span></h1>
             <h3>Cybersecurity Enthusiast & Networking</h3>
-            <p>Berfokus pada Ethical Hacking, CTF, Pentesting, Networking, dan Analisis Keamanan Sistem.</p>
+            <p>
+                Aktif belajar dan mendalami dunia keamanan digital, eksplorasi CTF, Pentesting, Ethical
+                Hacking, serta analisis jaringan. Berpengalaman menggunakan tool seperti Nmap, Wireshark, dan Kali Linux.
+            </p>
             <a href="#skills" class="btn">Lihat Keahlian</a>
         </div>
-        <div class="image"></div>
-    </section>
+    </header>
 
-    <section class="about" id="about">
-        <h2 class="section-title">Biodata Diri</h2>
-        <p class="about-text">
-            Saya adalah seorang <b>Cybersecurity Enthusiast</b> yang aktif mempelajari dan mendalami dunia keamanan digital.
-            Saya mengeksplorasi <b>CTF, Pentesting, Ethical Hacking, Networking</b>, serta penggunaan tools seperti
-            <b>Nmap, Wireshark, Metasploit, dan Kali Linux</b>. Saya memiliki ketertarikan kuat pada analisis kerentanan,
-            investigasi jaringan, dan memahami sistem secara mendalam.
-        </p>
-    </section>
+    <section id="skills" class="skills-section">
+        <h2>Keahlian Saya</h2>
+        <p class="skill-desc">Klik salah satu kartu untuk melihat detail skill</p>
 
-    <section class="skills" id="skills">
-        <h2 class="section-title">Keahlian Saya</h2>
-        <div class="skill-container">
+        <div class="skill-list">
+            <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
             <div class="skill-card" onclick="openSkill('ctf')">CTF (Capture The Flag)</div>
             <div class="skill-card" onclick="openSkill('pentest')">Pentesting</div>
-            <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
             <div class="skill-card" onclick="openSkill('nmap')">Nmap</div>
             <div class="skill-card" onclick="openSkill('wireshark')">Wireshark</div>
             <div class="skill-card" onclick="openSkill('networking')">Networking</div>
-            <div class="skill-card" onclick="openSkill('linux')">Linux & Security Tools</div>
+            <div class="skill-card" onclick="openSkill('linux')">Kali Linux & Tools</div>
         </div>
     </section>
 
-    <section class="detail" id="detail"></section>
+    <section id="detail" class="detail"></section>
 
-    <section class="contact" id="contact">
-        <h2 class="section-title">Kontak Saya</h2>
-        <p>Email : <b>rahm4n22@gmail.com</b></p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Klik Disini</a></p>
+    <section id="contact" class="contact">
+        <h2>Kontak Saya</h2>
+        <p>Email: <b>rahm4n22@gmail.com</b></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Klik di sini</a></p>
+        <p>GitHub: <a href="https://taufiqurahman-rh.github.io" target="_blank">taufiqurahman-rh.github.io</a></p>
     </section>
 
-    <footer>© 2025 Taufiqurahman — Cybersecurity Enthusiast</footer>
+    <footer>
+        <p>© 2025 Taufiqurahman — Cybersecurity Enthusiast</p>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
