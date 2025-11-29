@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio — Taufiqurahman RH</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Taufiqurahman</title>
+  <meta name="description" content="Portofolio Taufiqurahman — Cybersecurity Enthusiast & Networking" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <h2 class="logo">Taufiq RH</h2>
-        <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#skills">Keahlian</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-dot"></div>
+      <span>Taufiqurahman</span>
+    </div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#contact">Kontak</a>
     </nav>
+    <button id="btnMode" class="mode">🌤</button>
+  </header>
 
-    <!-- HERO / HOME -->
+  <main>
+    <!-- HERO / FIRST VIEW -->
     <section id="home" class="hero">
-        <h1>Halo 👋 Saya <span>Taufiqurahman</span></h1>
-        <p class="role">Cybersecurity Enthusiast & Networking</p>
-        <p class="desc">
-            Fokus pada Ethical Hacking, CTF, Pentesting, serta analisis dan keamanan jaringan.
-            Aktif belajar dan mengeksplorasi dunia keamanan sistem digital.
+      <div class="hero-left">
+        <h1 class="hero-title">Halo, saya <span class="accent">Taufiqurahman</span></h1>
+        <p class="hero-sub">Cybersecurity Enthusiast & Networking — fokus pada <strong>Ethical Hacking, Pentest, CTF</strong>.</p>
+
+        <p class="hero-desc">
+          Saya aktif mengeksplorasi celah keamanan, mempelajari tools seperti <em>Nmap</em> & <em>Wireshark</em>,
+          serta membangun pengalaman lewat CTF dan proyek jaringan. Lihat bagian <strong>Keahlian</strong> untuk detail.
         </p>
-        <a href="#skills" class="btn">Lihat Keahlian</a>
+
+        <div class="hero-ctas">
+          <a href="#skills" class="btn-primary">Lihat Keahlian</a>
+          <a href="#contact" class="btn-outline">Hubungi Saya</a>
+        </div>
+
+        <ul class="badges">
+          <li>CTF • Challenge Solver</li>
+          <li>Pentesting • Vulnerability Research</li>
+          <li>Networking • Cisco / Mikrotik</li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <!-- Ganti profil.png dengan file foto kamu di folder repo /img/profil.png -->
+        <div class="profile-wrap">
+          <img src="profil.png" alt="Foto Taufiqurahman" class="profile">
+          <div class="profile-glow"></div>
+        </div>
+
+        <div class="quick-info">
+          <div><strong>Email</strong><span>rahm4n22@gmail.com</span></div>
+          <div><strong>LinkedIn</strong><span><a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank" rel="noopener">taufiqurahman</a></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / BIODATA -->
+    <section id="about" class="section about">
+      <h2 class="section-title">Biodata Diri</h2>
+      <div class="card">
+        <p>
+          Saya adalah seorang <strong>Cybersecurity Enthusiast</strong> yang aktif belajar dan mendalami dunia keamanan digital.
+          Saya suka mengeksplorasi <strong>CTF, Pentesting, Ethical Hacking, Networking</strong>, serta berbagai tools seperti
+          <strong>Nmap, Wireshark, dan Kali Linux</strong>. Saya memiliki ketertarikan tinggi pada analisis kerentanan,
+          investigasi jaringan, dan pemahaman sistem secara mendalam.
+        </p>
+      </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="skills-section">
-        <h2>Keahlian Saya</h2>
+    <section id="skills" class="section skills">
+      <h2 class="section-title">Keahlian</h2>
 
-        <div class="skill-list">
-            <div class="skill-card" onclick="openSkill('ethical')">Ethical Hacking</div>
-            <div class="skill-card" onclick="openSkill('ctf')">CTF (Capture The Flag)</div>
-            <div class="skill-card" onclick="openSkill('pentest')">Pentesting</div>
-            <div class="skill-card" onclick="openSkill('nmap')">Nmap</div>
-            <div class="skill-card" onclick="openSkill('wireshark')">Wireshark</div>
-            <div class="skill-card" onclick="openSkill('networking')">Networking</div>
-            <div class="skill-card" onclick="openSkill('linux')">Kali Linux</div>
-        </div>
+      <div class="skill-grid" id="skillGrid">
+        <!-- skill cards: klik untuk open detail -->
+        <button class="skill" data-key="ctf">CTF</button>
+        <button class="skill" data-key="pentest">Pentest</button>
+        <button class="skill" data-key="ethical">Ethical Hacking</button>
+        <button class="skill" data-key="nmap">Nmap</button>
+        <button class="skill" data-key="wireshark">Wireshark</button>
+        <button class="skill" data-key="networking">Networking</button>
+        <button class="skill" data-key="linux">Kali Linux & Tools</button>
+      </div>
 
-        <div class="skill-detail" id="detail">
-            <p>Klik salah satu keahlian untuk melihat detail</p>
-        </div>
+      <div id="skillDetail" class="skill-detail-area">
+        <!-- content diisi oleh script.js -->
+        <div class="detail-empty">Klik salah satu keahlian di atas untuk melihat deskripsi</div>
+      </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <h2>Hubungi Saya</h2>
-        <p>Email: <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank">Taufiqurahman RH</a></p>
+    <section id="contact" class="section contact">
+      <h2 class="section-title">Kontak</h2>
+      <div class="card contact-card">
+        <div class="contact-line"><strong>Email:</strong> <a href="mailto:rahm4n22@gmail.com">rahm4n22@gmail.com</a></div>
+        <div class="contact-line"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/taufiqurahman-rahman-723162353" target="_blank" rel="noopener">Taufiqurahman</a></div>
+        <div class="contact-line"><strong>Github:</strong> <a href="https://github.com/Taufiqurahman-rh" target="_blank" rel="noopener">Taufiqurahman-rh</a></div>
+        <p class="note">Ingin kerja sama, trial pentest kecil, atau undangan CTF? Kirim email — saya cepat merespon.</p>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Taufiqurahman — Cybersecurity Enthusiast</p>
-    </footer>
+  <footer class="footer">
+    © <span id="year"></span> — Taufiqurahman · Cybersecurity Enthusiast
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
