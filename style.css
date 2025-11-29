@@ -1,6 +1,100 @@
+/* ====================== GLOBAL ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f9ff;
+  color: #222;
+  transition: 0.3s ease;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ====================== HEADER ====================== */
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #00aaff;
+}
+
+header p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ====================== PROFILE IMAGE ====================== */
+.profile-card {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #00aaff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ====================== SKILLS SECTION ====================== */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #00aaff;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.skill {
+  padding: 14px 22px;
+  border-radius: 12px;
+  border: 2px solid #00aaff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  background: white;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #00aaff;
+  color: white;
+}
+
+.skill.active {
+  background: #00aaff;
+  color: white;
+}
+
 /* ---------------- SKILL DETAIL ---------------- */
 .skill-detail-area {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,34 +104,64 @@
   max-width: 1100px;
   width: 100%;
   background: #ffffff;
-  padding: 24px 32px;
-  border-radius: 16px;
+  padding: 28px 32px;
+  border-radius: 18px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   border: 1px solid rgba(0,0,0,0.1);
   animation: fadeIn 0.3s ease-in-out;
 }
 
 .detail-card h2 {
-  font-size: 28px;
-  margin-bottom: 12px;
+  font-size: 30px;
+  margin-bottom: 14px;
   color: #00aaff;
   font-weight: 700;
 }
 
 .detail-card p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6;
   color: #333;
-}
-
-.skill.active {
-  background: #00aaff;
-  color: white;
-  transition: 0.3s;
 }
 
 /* animasi */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====================== CONTACT SECTION ====================== */
+.contact {
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: 16px;
+  background: white;
+  text-align: center;
+  border: 2px solid #00aaff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  font-size: 32px;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #00aaff;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  font-size: 18px;
 }
