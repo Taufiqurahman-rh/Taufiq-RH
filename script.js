@@ -1,81 +1,86 @@
-// Data Deskripsi Skill
-const skillDescriptions = {
-  ctf: `
-    <h3>CTF (Capture The Flag)</h3>
-    <p>
-      Aktif mengikuti dan mempelajari berbagai jenis CTF untuk meningkatkan kemampuan eksploitasi,
-      analisis sistem, dan pemecahan masalah. Terbiasa menemukan <b>FLAG</b> pada kategori seperti
-      <b>web exploitation, cryptography, forensic, reverse engineering,</b> dan <b>network analysis</b>.
-    </p>
-  `,
+// script.js — interaksi skill + small UI tweaks
+document.addEventListener('DOMContentLoaded', () => {
+  // skill descriptions (pakai kata-kata kamu)
+  const skills = {
+    ctf: {
+      title: "CTF (Capture The Flag)",
+      text: "Sering bermain dan mempelajari berbagai jenis CTF untuk meningkatkan kemampuan eksploitasi, analisis sistem, dan pemecahan masalah. Terbiasa menemukan FLAG pada kategori web exploitation, cryptography, forensic, maupun network analysis."
+    },
+    pentest: {
+      title: "Pentest (Penetration Testing)",
+      text: "Menguasai proses pengujian keamanan sistem mulai dari reconnaissance, scanning, exploitation, hingga reporting untuk mengidentifikasi dan menilai kerentanan."
+    },
+    ethical: {
+      title: "Ethical Hacking",
+      text: "Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan bekerja dan bagaimana memperkuat pertahanan sistem dari ancaman."
+    },
+    nmap: {
+      title: "Nmap",
+      text: "Berpengalaman menggunakan Nmap untuk memetakan jaringan, mendeteksi port dan service terbuka, serta mengidentifikasi potensi celah keamanan."
+    },
+    wireshark: {
+      title: "Wireshark",
+      text: "Mampu melakukan analisis paket jaringan untuk troubleshooting, investigasi aktivitas mencurigakan, dan memahami pola komunikasi di dalam jaringan."
+    },
+    networking: {
+      title: "Networking (Cisco, dll)",
+      text: "Mampu mengkonfigurasi perangkat jaringan seperti router dan switch (Cisco), memahami konsep VLAN, routing, subnetting, hingga keamanan jaringan dasar."
+    },
+    linux: {
+      title: "Kali Linux & Security Tools",
+      text: "Terbiasa menggunakan Kali Linux sebagai sistem utama untuk analisis keamanan, termasuk tools seperti Metasploit, Nmap, Wireshark, dan Burp Suite."
+    }
+  };
 
-  pentest: `
-    <h3>Pentest (Penetration Testing)</h3>
-    <p>
-      Menguasai proses pengujian keamanan sistem mulai dari <b>reconnaissance, scanning, enumeration,
-      exploitation, privilege escalation, hingga reporting</b>. Berfokus mencari kerentanan dan menguji
-      seberapa kuat pertahanan sistem.
-    </p>
-  `,
+  // handle skill clicks
+  const skillEls = document.querySelectorAll('.skill');
+  const detailArea = document.getElementById('skillDetail');
 
-  ethical: `
-    <h3>Ethical Hacking</h3>
-    <p>
-      Mempraktikkan teknik peretasan secara etis untuk memahami bagaimana serangan bekerja
-      dan bagaimana memperkuat sistem dari ancaman dunia nyata. Berkomitmen pada prinsip legal dan etika.
-    </p>
-  `,
+  function showDetail(key) {
+    const data = skills[key];
+    if (!data) return;
+    detailArea.innerHTML = `
+      <div class="detail-card">
+        <h2>${data.title}</h2>
+        <p>${data.text}</p>
+        <p><strong>Kenapa saya tertarik:</strong> Saya percaya pemahaman mendalam terhadap teknik serangan membantu membangun pertahanan yang lebih kuat — pendekatan learning-by-doing melalui CTF dan lab praktis.</p>
+      </div>
+    `;
+    // fokus ke detail + smooth
+    detailArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 
-  nmap: `
-    <h3>Nmap</h3>
-    <p>
-      Berpengalaman menggunakan <b>Nmap</b> untuk melakukan pemetaan jaringan, mendeteksi port dan service terbuka,
-      version scanning, OS fingerprinting, serta mengidentifikasi celah keamanan tingkat awal.
-    </p>
-  `,
+  skillEls.forEach(el => {
+    el.addEventListener('click', () => {
+      const key = el.getAttribute('data-key');
+      showDetail(key);
+      // active visual
+      skillEls.forEach(s => s.classList.remove('active'));
+      el.classList.add('active');
+    });
+  });
 
-  wireshark: `
-    <h3>Wireshark</h3>
-    <p>
-      Mampu melakukan analisis paket jaringan untuk troubleshooting, investigasi aktivitas mencurigakan,
-      memahami pola komunikasi, dan mengungkap indikasi serangan menggunakan teknik deep packet inspection.
-    </p>
-  `,
+  // set year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  networking: `
-    <h3>Networking (Cisco / Mikrotik)</h3>
-    <p>
-      Mampu mengkonfigurasi router & switch, VLAN, routing static/dynamic, subnetting, firewall basic,
-      hingga keamanan jaringan dasar. Memahami struktur jaringan dan manajemen perangkat real environment.
-    </p>
-  `,
+  // theme toggle
+  const btnMode = document.getElementById('btnMode');
+  btnMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    btnMode.textContent = document.body.classList.contains('dark') ? '🌙' : '🌤';
+  });
 
-  linux: `
-    <h3>Kali Linux & Security Tools</h3>
-    <p>
-      Terbiasa menggunakan <b>Kali Linux</b> sebagai sistem utama untuk analisis keamanan,
-      termasuk tools seperti <b>Burp Suite, Metasploit, Nmap, Wireshark, SQLmap, Hydra, Aircrack-ng</b> dan lainnya.
-    </p>
-  `
-};
-
-// Event klik pada skill
-const buttons = document.querySelectorAll(".skill");
-const detailArea = document.getElementById("skillDetail");
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const key = button.getAttribute("data-key");
-    detailArea.innerHTML = skillDescriptions[key] || "Deskripsi tidak ditemukan.";
+  // keyboard: tekan 1..7 untuk open skill cepat (opsional)
+  const keys = ['ctf','pentest','ethical','nmap','wireshark','networking','linux'];
+  window.addEventListener('keydown', (e) => {
+    if (e.key >= '1' && e.key <= '7') {
+      const idx = parseInt(e.key,10) - 1;
+      const k = keys[idx];
+      if (k) {
+        const el = document.querySelector(`.skill[data-key="${k}"]`);
+        if (el) el.click();
+      }
+    }
   });
 });
-
-// Mode terang / gelap
-const btnMode = document.getElementById("btnMode");
-btnMode.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  btnMode.textContent = document.body.classList.contains("dark") ? "🌙" : "🌤";
-});
-
-// Set tahun otomatis footer
-document.getElementById("year").textContent = new Date().getFullYear();
